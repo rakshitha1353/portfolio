@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* ... (Your CSS styles from the previous response) ... */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <img src="images/Rakshitha .jpg" alt="Your Profile Picture">  <h2>About Me</h2>
+            <p>A Software Development Engineer (SDE) is a professional responsible for designing, developing, testing, and maintaining software applications. They work collaboratively within a team to build high-quality, efficient, and scalable software solutions that meet user needs and business objectives. This involves understanding requirements, writing code, debugging, and ensuring software performance and reliability. SDEs often specialize in areas like front-end, back-end, or full-stack development, and possess strong problem-solving skills, technical expertise, and a passion for continuous learning in the ever-evolving field of technology..</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="slider-container">
+                <div class="slider" id="project-slider">
+                    <div class="slide">
+                        <div class="project">
+                            <h3>Carbon footprinting calculator</h3>
+                            <p>This project leverages the power of Artificial Intelligence (AI) and data analysis, specifically using the Python programming language and the Random Forest machine learning algorithm, to address a challenge related to sustainability and "Green Skills." It aims to (clearly state the project's goal - e.g., predict energy consumption, optimize resource allocation, analyze environmental impact, etc.)..</p>
+                            <a href="https://github.com/rakshitha1353/carbon-footprint-calculator">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="project">
+                            <h3>Employee Skill tracker</h3>
+                            <p>This system is designed to effectively monitor and track the skills and development of employees within an organization. Facilitates the creation and tracking of personalized skill development plans for each employee. Includes features for setting goals, defining learning paths, and assigning mentors. Enables continuous performance monitoring and evaluation. Allows for tracking of key performance indicators (KPIs) linked to employee skills..</p>
+                            <a href="https://github.com/rakshitha1353/Employee-Skill-Tracker">Link to Project 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button onclick="prevSlide()">Prev</button>
+                    <button onclick="nextSlide()">Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <p><a href="resume/My Resume.pdf" download>Download Resume (PDF)</a></p> </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS</li>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>React.js</li>
+                <li>AI&ML</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: rakshithagirishrakshithagirish@gmail.com</p>
+            <p>Phone: 6362208311</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/rakshitha-g1/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/rakshitha1353"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rakshitha G</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // ... (let currentSlide = 0;
+const slides = document.querySelectorAll('.slide'); // Get all elements with the class "slide"
+const slider = document.querySelector('.slider'); // Get the element with the class "slider"
+const totalSlides = slides.length; // Number of slides
+
+function showSlide(n) {
+    // Calculate the new position of the slider
+    const newPosition = -n * 100 + '%';  // -0%, -100%, -200% etc.
+
+    // Use CSS transform for smooth transitions
+    slider.style.transform = 'translateX(' + newPosition + ')';
+
+    // Optional: Add active class to navigation dots (if you have them)
+    // ... (code to update active dots)
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to 0 when reaching the end
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Loop back from 0 to the end
+    showSlide(currentSlide);
+}
+
+// Optional: Auto slide
+let autoSlideInterval;
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds (adjust as needed)
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Initialize the slider
+showSlide(currentSlide); // Show the first slide
+
+// Start auto slide (optional)
+startAutoSlide();
+
+// Stop auto slide when the user interacts with the slider (optional)
+const sliderContainer = document.querySelector('.slider-container'); // Select the slider container
+sliderContainer.addEventListener('mouseenter', stopAutoSlide); // Stop on mouse enter
+sliderContainer.addEventListener('mouseleave', startAutoSlide); // Start on mouse leave
+
+
+
+// Add event listeners to your "Next" and "Previous" buttons
+const nextButton = document.querySelector('.next-button'); // Replace with your button's selector
+const prevButton = document.querySelector('.prev-button'); // Replace with your button's selector
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+</script>
+</body>
+</html>

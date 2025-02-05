@@ -1,0 +1,257 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif; /* Modern font stack */
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; 
+    body {
+    /* ... other styles ... */
+    background: linear-gradient(to bottom right, #f0f2f5, #e6f2ff, #ffffff); /* Example 3-color gradient */
+    /* Or for a more subtle effect: */
+    /* background: linear-gradient(to bottom, #f8f9fa, #ffffff); */
+}/* Subtle background color */
+}
+
+header {
+    background-color: blue; /* White header */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px; 
+     /* Increased spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Darker link color */
+    font-weight: 500; /* Slightly bolder */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+.container {
+    max-width: 1200px; /* Wider container */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* White content background */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* More prominent shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+#about {
+    padding: 40px; 
+    background-color: #007bff;
+}
+
+#about img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow on image */
+}
+
+#about h2 {
+    margin-bottom: 10px;
+}
+
+#about p {
+    text-align: justify; /* Justified text */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted minmax */
+    grid-gap: 30px;
+    padding: 40px;
+    
+ /* Increased padding */
+}
+
+.project {
+    border: none; /* Removed border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Project card shadow */
+    border-radius: 8px;
+    overflow: hidden; /* Hide overflowing content */
+    transition: transform 0.2s ease; 
+    
+    /* Hover effect */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block; /* Prevent image from creating extra space */
+}
+
+.project-content { /* New div for project content */
+    padding: 20px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 15px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.project a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+#resume {
+    padding: 40px;
+    text-align: center;
+    background-color: #007bff; /* Center the resume content */
+}
+
+#resume a {
+    display: inline-block; /* Make the link a block element */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#resume a:hover {
+    background-color: #0056b3;
+}
+
+
+/* ... (previous CSS) ... */
+
+#skills {
+    background-color: #fff; /* White background for skills */
+    padding: 2rem 0;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange skills horizontally */
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    justify-content: center; /* Center the skills */
+}
+
+#skills li {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f0f0f0; /* Light background */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    #skills ul {
+        flex-direction: column; /* Stack skills vertically on smaller screens */
+        align-items: center;
+    }
+
+    #skills li {
+        margin: 0.5rem 0; /* Adjust margins for vertical stacking */
+    }
+
+    #about .container {
+        flex-direction: column; /* Stack about content vertically */
+        text-align: center; /* Center text in about section */
+    }
+
+    .headshot {
+        margin: 0 auto 1rem; /* Center the headshot */
+        margin-right: 0;
+    }
+}
+#contact {
+    padding: 40px;
+    text-align: center;
+    background-color: #007bff; /* Center contact info */
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Added margin */
+    text-align: center; /* Center social icons */
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 20px; /* Larger icons */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px; /* Increased padding */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px; /* Added margin for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about img {
+        float: none; /* Image above text on smaller screens */
+        margin: 0 auto 20px;
+        display: block; /* Center the image */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 20px;
+    }
+
+    nav li {
+        margin: 0 10px; /* Adjust nav link spacing */
+    }
+}
