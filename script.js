@@ -13,4 +13,3 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Add more JavaScript as needed
